@@ -2,9 +2,12 @@ import dash
 from dash import html, dcc
 import plotly.express as px
 import pandas as pd
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parents[1]
 
 # --- Load data ---
-df = pd.read_csv("data/raw/netflix_titles.csv")
+df = pd.read_csv(BASE_DIR / "data" / "raw" / "netflix_titles.csv")
 
 # Top 10 genres
 top_genres = (
@@ -51,7 +54,7 @@ fig_years.update_traces(line_color='#3498db')
 
 # --- Load map HTML ---
 with open(
-    r"C:\Users\a12u\OneDrive\Desktop\Courses\IBM Data Science\Data Visualization with python\media-consumption-analysis\notebooks\images\netflix_map.html",
+    BASE_DIR / "notebooks" / "images" / "netflix_map.html",
     "r",
     encoding="utf-8"
 ) as f:
