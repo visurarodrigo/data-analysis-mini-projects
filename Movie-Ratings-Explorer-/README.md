@@ -1,83 +1,68 @@
-# 🎬 Movie Ratings Explorer
+# Movie Ratings Explorer
 
-**Author:** Visura Rodrigo  
-**Course:** Databases and SQL for Data Science with Python (IBM)  
-**Dataset:** IMDb Top 1000 Movies (`imdb_top_1000.csv`)  
+SQL + Python exploratory analysis project based on the IMDb Top 1000 movies dataset.
 
----
+## Project Overview
 
-## 📌 Overview
+This project demonstrates a practical analytics workflow inside Jupyter:
 
-This project demonstrates how to explore and analyze a structured movie dataset using SQL and Python together inside a Jupyter Notebook. The dataset includes IMDb’s top 1000 movies, and the analysis is done using SQL queries via `%sql` magic, then visualized with pandas, matplotlib, and seaborn.
+- load a CSV dataset with pandas
+- persist records into SQLite
+- query the database using ipython-sql
+- visualize rating and genre patterns with Python charts
 
----
+## Repository Structure
 
-## 🗂️ Contents
+```text
+Movie-Ratings-Explorer-/
+  data/
+    raw/
+      imdb_top_1000.csv
+    processed/
+      movies.db
+  notebooks/
+    movie_ratings_explorer.ipynb
+  reports/
+    figures/
+      Average IMDb Rating by Release Year ( Since 1970 ).png
+      Distribution of IMDB Ratings.png
+      Top 10 movie Genres by Count.png
+  requirements.txt
+  README.md
+```
 
-- Load movie data from CSV
-- Store it into an SQLite database
-- Connect SQL queries to Jupyter using `ipython-sql`
-- Perform exploratory SQL analysis (ratings, genres, revenue)
-- Visualize trends using Python (runtime, rating, gross earnings)
+## Setup
 
----
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+jupyter notebook notebooks/movie_ratings_explorer.ipynb
+```
 
-## 🛠️ Tools & Technologies
+## Analysis Scope
 
-- SQLite3  
-- Python  
-- pandas, matplotlib, seaborn  
-- ipython-sql, prettytable  
-- Jupyter Notebook
+The notebook covers:
 
----
+- highest-rated movie exploration
+- genre frequency and ranking
+- average ratings and trends by release year
+- director-level and revenue-related SQL summaries
 
-## 📁 Files Included
+## Data and Database Paths
 
-- `movie_ratings_explorer.ipynb` → Main notebook with analysis  
-- `imdb_top_1000.csv` → Dataset file used  
-- `README.md` → This file  
-- `screenshots` → Output graphs and visualizations  
+Notebook paths were standardized for portability:
 
----
+- dataset: ../data/raw/imdb_top_1000.csv
+- sqlite database: ../data/processed/movies.db
 
-## ▶️ How to Run
+## Professional Improvements Applied
 
-1. Clone the repository
-2. Open `movie_ratings_explorer.ipynb` in Jupyter
-3. Ensure `imdb_top_1000.csv` is in the same folder
-4. Run all cells in sequence
+- moved data, notebook, and figures into a consistent analytics layout
+- centralized generated visuals under reports/figures
+- added explicit dependency management via requirements.txt
+- cleaned and standardized project documentation
 
----
+## Author
 
-## 📈 Sample Insights
-
-- Highest-rated movies
-- Top Directors by Number of Movies:
-- Revenue vs Rating analysis
-- Distribution of IMDb Ratings
-
----
-
-## ✅ Learning Outcomes
-
-- Loading and querying SQL databases from within Jupyter
-- Analyzing structured data with SQL commands
-- Visual storytelling using Python visualizations
-- Hands-on practice integrating databases into data science workflows
-
----
-
-My certificate - https://coursera.org/share/9e6cc4e4b414a51e35d1abb87f80e32b
-
----
-
-## 🏷️ Tags
-
-`SQL` `Python` `IMDb` `Jupyter` `Data Analysis` `Visualization` `SQLite` `Coursera Project`
-
----
-
-## 📃 License
-
-This project is shared under the MIT License. Feel free to fork, modify, and reuse with attribution.
+Visura Rodrigo
