@@ -1,57 +1,62 @@
-# Stock Price Analysis of Apple Inc.
+# Stock Price Analysis of Apple Inc
 
-Welcome to my first Python Data Analysis Project! 🎉
+Time-series exploration project analyzing historical Apple stock behavior using Python.
 
-This project explores the historical stock performance of Apple Inc. using data sourced from both Yahoo Finance and a JSON file provided by IBM Skills Network.The goal is to apply Python skills to clean, analyze, and visualize real-world financial data.
+## Project Overview
 
-### Project Structure
+This notebook-based project examines Apple stock performance through data retrieval, preparation, and visualization.
+The analysis includes:
 
-📦 Stock-Change/
- ┣ 📘 Stock Change.ipynb
- ┣ 📄 README.md
- ┣ 📊 apple.json
- ┗ 📈 Charts 
+- historical price and volume trend analysis
+- moving average and rolling volatility exploration
+- daily return distribution patterns
+- dividend history visualization
 
-### Tools & Libraries Used
+## Repository Structure
 
-Python 3
-yfinance – for downloading historical stock data
-pandas – for data manipulation and analysis
-matplotlib & seaborn – for data visualization
-urllib.request – for retrieving JSON data
-datetime – for working with date ranges
+```text
+-Stock-Price-Analysis-of-Apple-Inc/
+  data/
+    raw/
+      apple.json
+  notebooks/
+    stock_change.ipynb
+  reports/
+    figures/
+      20-Day Rolling Volatility of Apple Stock.png
+      Apple Close Price & 20-day SMA.png
+      Apple Dividend History Over Time.png
+      Apple Stock Closing Price Over Time.png
+      Apple Stock Opening Prices Over Time.png
+      Apple Stock Trading Volume Over Time.png
+      Daily Returns.png
+  .gitignore
+  requirements.txt
+  README.md
+```
 
-### Key Features of the Analysis
+## Setup
 
-1. Data Retrieval
-    Fetched Apple stock data using the yfinance library.
-    Downloaded a static Apple stock data file (apple.json) via urllib.
-2. Data Wrangling
-    Converted date fields to proper datetime format.
-    Cleaned missing values and inspected data structure.
-    Calculated important metrics like:
-    Daily returns
-    Moving averages
-3. Exploratory Data Analysis (EDA)
-    Used descriptive statistics (.describe()) to understand data distribution.
-    Created insightful visualizations:
-    Line plots of stock prices over time
-    Moving average overlays
-    Histogram of daily returns
-4. Insights
-    Observed significant patterns in price movements.
-    Evaluated how short-term and long-term trends compare.
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+jupyter notebook notebooks/stock_change.ipynb
+```
 
-### Sample Visualizations
+## Data Notes
 
-Line Chart of Opening/Closing Prices
-20 Day Moving Averages
-Histogram of Daily Returns
+- The notebook loads JSON data from ../data/raw/apple.json.
+- Stock market data is also retrieved via yfinance in the workflow.
 
-All charts were generated using matplotlib and provide valuable visual insight into Apple stock's behavior over time.
+## Professional Improvements Applied
 
+- reorganized flat files into standard analytics folders
+- moved visual outputs to reports/figures
+- standardized notebook naming and path references
+- added explicit requirements and repository hygiene rules
+- upgraded project documentation for clarity and maintainability
 
+## Author
 
-
-
-
+Visura Rodrigo
