@@ -1,16 +1,18 @@
-# Stock Price Analysis of Apple Inc
+# Apple Stock Analysis (AAPL)
 
-Time-series exploration project analyzing historical Apple stock behavior using Python.
+A professional time-series analysis project exploring Apple Inc. stock behavior using Python, Jupyter, and financial market data.
 
-## Project Overview
+## Overview
 
-This notebook-based project examines Apple stock performance through data retrieval, preparation, and visualization.
-The analysis includes:
+This project analyzes historical AAPL data to understand long-term trend, return behavior, and short-term risk patterns.
 
-- historical price and volume trend analysis
-- moving average and rolling volatility exploration
-- daily return distribution patterns
-- dividend history visualization
+Core analysis areas:
+- price trend and market movement over time
+- trading volume behavior
+- dividend history exploration
+- daily return distribution
+- moving averages (20-day and 50-day)
+- rolling 20-day volatility
 
 ## Repository Structure
 
@@ -19,23 +21,32 @@ The analysis includes:
   data/
     raw/
       apple.json
+      README.md
   notebooks/
     stock_change.ipynb
   reports/
     figures/
       20-Day Rolling Volatility of Apple Stock.png
-      Apple Close Price & 20-day SMA.png
+      Apple Close Price and 20-Day SMA.png
+      Apple Close Price with 20-Day and 50-Day Moving Averages.png
       Apple Dividend History Over Time.png
       Apple Stock Closing Price Over Time.png
       Apple Stock Opening Prices Over Time.png
       Apple Stock Trading Volume Over Time.png
       Daily Returns.png
-  .gitignore
   requirements.txt
   README.md
 ```
 
-## Setup
+## Tech Stack
+
+- Python
+- Jupyter Notebook
+- pandas
+- matplotlib
+- yfinance
+
+## Setup and Run
 
 ```bash
 python -m venv .venv
@@ -44,18 +55,20 @@ pip install -r requirements.txt
 jupyter notebook notebooks/stock_change.ipynb
 ```
 
-## Data Notes
+## Data Sources
 
-- The notebook loads JSON data from ../data/raw/apple.json.
-- Stock market data is also retrieved via yfinance in the workflow.
+- Local metadata file: data/raw/apple.json
+- Historical market data: downloaded in-notebook via yfinance
 
-## Professional Improvements Applied
+## Outputs
 
-- reorganized flat files into standard analytics folders
-- moved visual outputs to reports/figures
-- standardized notebook naming and path references
-- added explicit requirements and repository hygiene rules
-- upgraded project documentation for clarity and maintainability
+Generated figures are saved in reports/figures and include:
+- opening and closing price trends
+- trading volume trend
+- dividend history
+- daily returns histogram
+- moving average comparisons
+- rolling volatility profile
 
 ## Author
 
