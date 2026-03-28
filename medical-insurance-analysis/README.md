@@ -1,28 +1,42 @@
-# Medical Insurance Analysis
+# Medical Insurance Cost Analysis
 
-End-to-end regression analysis project for predicting medical insurance charges and identifying major cost drivers.
+Professional regression analysis project for understanding and predicting medical insurance charges using demographic and lifestyle factors.
 
-## Project Summary
+## Executive Summary
 
-This project analyzes insurance cost data using exploratory data analysis and supervised regression models.
-The notebook covers:
+This project combines exploratory data analysis and supervised machine learning to identify the strongest cost drivers in medical insurance pricing and evaluate predictive model performance.
 
-- data preparation and cleaning
-- exploratory analysis and visual diagnostics
-- baseline and advanced regression models
-- model comparison and refinement
+## Project Objectives
+
+- analyze how age, BMI, smoking status, region, and number of children relate to insurance charges
+- build baseline and regularized regression models
+- compare model performance and refine predictive quality
+- produce reproducible visual and modeling artifacts
+
+## Tech Stack
+
+- Python
+- pandas and numpy
+- matplotlib and seaborn
+- scikit-learn
+- Jupyter Notebook
 
 ## Repository Structure
 
 ```text
 medical-insurance-analysis/
   data/
+    README.md
     raw/
+      README.md
       insurance.csv
   notebooks/
+    README.md
     insurance_analysis.ipynb
   reports/
+    README.md
     figures/
+      README.md
       Age vs Charges.png
       Bmi vs Charges.png
       Comparison of Regression Models.png
@@ -32,21 +46,30 @@ medical-insurance-analysis/
   README.md
 ```
 
-## Tech Stack
+## Analysis Workflow
 
-- Python 3.10+
-- pandas
-- numpy
-- matplotlib
-- seaborn
-- scikit-learn
-- jupyter
+1. Load and clean raw insurance data.
+2. Perform exploratory analysis with univariate and bivariate visuals.
+3. Train and compare regression models.
+4. Review model metrics and select/refine best-performing approach.
 
-## Setup
+## Models Evaluated
 
-1. Create and activate a virtual environment.
-2. Install dependencies.
-3. Run the notebook.
+- Simple Linear Regression
+- Multiple Linear Regression
+- Ridge Regression
+- Polynomial Ridge Regression
+
+## Key Insight Areas
+
+- smoking status influence on insurance charges
+- BMI and age relationship with cost
+- contribution of region and dependents to charge variation
+- model trade-offs between bias and variance
+
+## Setup and Run
+
+From the `medical-insurance-analysis` folder:
 
 ```bash
 python -m venv .venv
@@ -55,26 +78,11 @@ pip install -r requirements.txt
 jupyter notebook notebooks/insurance_analysis.ipynb
 ```
 
-## Modeling Scope
+## Artifacts
 
-Models evaluated in the notebook include:
-
-- simple linear regression
-- multiple linear regression
-- ridge regression
-- polynomial ridge regression
-
-## Key Insight Areas
-
-- impact of smoking status on charges
-- relationship between BMI and charges
-- age-based cost patterns
-- relative effect of region and number of children
-
-## Notes
-
-- Figures produced during EDA and model evaluation are stored under reports/figures.
-- Dataset used in this project is stored under data/raw.
+- source dataset: `data/raw/insurance.csv`
+- notebook analysis: `notebooks/insurance_analysis.ipynb`
+- exported visuals: `reports/figures`
 
 ## Author
 
